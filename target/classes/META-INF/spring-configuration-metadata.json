@@ -1,0 +1,114 @@
+{
+  "groups": [
+    {
+      "name": "custom.config",
+      "type": "com.xkcoding.rbac.security.config.CustomConfig",
+      "sourceType": "com.xkcoding.rbac.security.config.CustomConfig"
+    },
+    {
+      "name": "demo.data.elasticsearch",
+      "type": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties"
+    },
+    {
+      "name": "demo.data.elasticsearch.account",
+      "type": "com.xkcoding.rbac.security.config.ElasticsearchProperties$Account",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties"
+    },
+    {
+      "name": "demo.data.elasticsearch.index",
+      "type": "com.xkcoding.rbac.security.config.ElasticsearchProperties$Index",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties"
+    },
+    {
+      "name": "jwt.config",
+      "type": "com.xkcoding.rbac.security.config.JwtConfig",
+      "sourceType": "com.xkcoding.rbac.security.config.JwtConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "custom.config.ignores",
+      "type": "com.xkcoding.rbac.security.config.IgnoreConfig",
+      "description": "不需要拦截的地址",
+      "sourceType": "com.xkcoding.rbac.security.config.CustomConfig"
+    },
+    {
+      "name": "demo.data.elasticsearch.cluster-name",
+      "type": "java.lang.String",
+      "description": "集群名称",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "defaultValue": "elasticsearch"
+    },
+    {
+      "name": "demo.data.elasticsearch.cluster-nodes",
+      "type": "java.util.List<java.lang.String>",
+      "description": "集群节点",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties"
+    },
+    {
+      "name": "demo.data.elasticsearch.connect-timeout",
+      "type": "java.lang.Integer",
+      "description": "连接超时时间(毫秒)",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "defaultValue": 1000
+    },
+    {
+      "name": "demo.data.elasticsearch.connection-request-timeout",
+      "type": "java.lang.Integer",
+      "description": "连接请求超时时间",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "defaultValue": 500
+    },
+    {
+      "name": "demo.data.elasticsearch.max-connect-per-route",
+      "type": "java.lang.Integer",
+      "description": "每个路由的最大连接数量",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "defaultValue": 10
+    },
+    {
+      "name": "demo.data.elasticsearch.max-connect-total",
+      "type": "java.lang.Integer",
+      "description": "最大连接总数量",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "defaultValue": 30
+    },
+    {
+      "name": "demo.data.elasticsearch.schema",
+      "type": "java.lang.String",
+      "description": "请求协议",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "defaultValue": "http"
+    },
+    {
+      "name": "demo.data.elasticsearch.socket-timeout",
+      "type": "java.lang.Integer",
+      "description": "socket 超时时间",
+      "sourceType": "com.xkcoding.rbac.security.config.ElasticsearchProperties",
+      "defaultValue": 30000
+    },
+    {
+      "name": "jwt.config.key",
+      "type": "java.lang.String",
+      "description": "jwt 加密 key，默认值：xkcoding.",
+      "sourceType": "com.xkcoding.rbac.security.config.JwtConfig",
+      "defaultValue": "xkcoding"
+    },
+    {
+      "name": "jwt.config.remember",
+      "type": "java.lang.Long",
+      "description": "开启 记住我 之后 jwt 过期时间，默认值 604800000 {@code 7 天}",
+      "sourceType": "com.xkcoding.rbac.security.config.JwtConfig",
+      "defaultValue": 604800000
+    },
+    {
+      "name": "jwt.config.ttl",
+      "type": "java.lang.Long",
+      "description": "jwt 过期时间，默认值：600000 {@code 10 分钟}.",
+      "sourceType": "com.xkcoding.rbac.security.config.JwtConfig",
+      "defaultValue": 600000
+    }
+  ],
+  "hints": []
+}
